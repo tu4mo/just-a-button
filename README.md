@@ -12,6 +12,7 @@ Technologies used:
 - Redux Toolkit to change button clicked state
 - Recoil to change button click count
 - Valtio to flip background color
+- oxlint
 - stylelint with:
   - configs: recommended, styled-components
   - plugins: order
