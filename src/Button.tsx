@@ -8,7 +8,7 @@ import { useRecoilState } from "recoil";
 
 import { click } from "./store";
 import { counterState } from "./recoil";
-import styles from "./Button.module.css";
+import * as styles from "./Button.module.css";
 import { state } from "./valtio";
 
 const StyledButton = styled.button`
