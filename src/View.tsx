@@ -3,7 +3,7 @@ import { useSnapshot } from "valtio";
 import { state } from "./valtio";
 
 const Button = React.lazy(
-  () => import(/* webpackChunkName: "Button" */ "./Button")
+  () => import(/* webpackChunkName: "Button" */ "./Button"),
 );
 
 const View = () => {

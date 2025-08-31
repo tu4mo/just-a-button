@@ -4,10 +4,8 @@ import { css } from "@emotion/css";
 import { useTranslation } from "react-i18next";
 import cc from "classcat";
 import { useDispatch, useSelector } from "react-redux";
-import { useRecoilState } from "recoil";
 
 import { click } from "./store";
-import { counterState } from "./recoil";
 import * as styles from "./Button.module.css";
 import { state } from "./valtio";
 
@@ -31,11 +29,8 @@ const Button = () => {
   const buttonClicked = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const [count, setCount] = useRecoilState(counterState);
-
   const onClick = useCallback(() => {
     dispatch(click());
-    setCount((count) => count + 1);
     state.backgroundFlipped = !state.backgroundFlipped;
   }, []);
 
@@ -51,10 +46,7 @@ const Button = () => {
       ])}
       onClick={onClick}
     >
-      <>
-        {t(buttonClicked ? "clicked" : "clickMe")}
-        {buttonClicked ? ` ${count} times` : null}
-      </>
+      {t(buttonClicked ? "clicked" : "clickMe")}
     </StyledButton>
   );
 };
