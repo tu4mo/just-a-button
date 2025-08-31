@@ -10,7 +10,7 @@ Technologies used:
 - Google Fonts for a web font
 - Localized with react-i18next
 - Redux Toolkit to change button clicked state
-- Recoil to change button click count
+- ~~Recoil to change button click count~~
 - Valtio to flip background color
 - oxlint
 - stylelint with:
